@@ -15,7 +15,7 @@ The primary objective is to develop a robust model for predicting fraudulent tra
 ## 2. The Dataset 📊
 The dataset is a synthetic log of financial transactions from a mobile money service.
 
-**Source:** Kaggle: Synthetic Financial Datasets for Fraud Detection
+**Source:**  [Kaggle: Synthetic Financial Datasets for Fraud Detection](https://www.kaggle.com/datasets/ealaxi/paysim1/data)
 
 **Size:** 6.3 million transactions.
 
@@ -72,4 +72,17 @@ Python 3.9+
 pip (Python package installer)
 
 #### Installation & Execution
-Clone the repository:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/SamRobinSingh/FinCortex.git
+   cd FinCortex
+2. **Install dependencies:**
+   It's recommended to use a virtual environment.
+   
+   ```bash
+   pip install -r requirements.txt
+4. ** **
+5. ** **
+  
+   
