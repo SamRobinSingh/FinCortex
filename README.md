@@ -15,49 +15,49 @@ The primary objective is to develop a robust model for predicting fraudulent tra
 ## 2. The Dataset 📊
 The dataset is a synthetic log of financial transactions from a mobile money service.
 
-Source: Kaggle: Synthetic Financial Datasets for Fraud Detection
+**Source:** Kaggle: Synthetic Financial Datasets for Fraud Detection
 
-Size: 6.3 million transactions.
+**Size:** 6.3 million transactions.
 
-Timeframe: A 30-day simulation where 1 step equals 1 hour.
+**Timeframe:** A 30-day simulation where 1 step equals 1 hour.
 
-Key Data Fields:
+**Key Data Fields:**
 
-type: The type of transaction (CASH-IN, CASH-OUT, DEBIT, PAYMENT, TRANSFER).
+**type:** The type of transaction (CASH-IN, CASH-OUT, DEBIT, PAYMENT, TRANSFER).
 
-amount: The value of the transaction.
+**amount:** The value of the transaction.
 
-oldbalanceOrg / newbalanceOrig: The balance of the originating customer before and after the transaction.
+**oldbalanceOrg / newbalanceOrig:** The balance of the originating customer before and after the transaction.
 
-oldbalanceDest / newbalanceDest: The balance of the recipient customer before and after the transaction.
+**oldbalanceDest / newbalanceDest:** The balance of the recipient customer before and after the transaction.
 
 
-isFraud: A binary flag indicating if the transaction was determined to be fraudulent within the simulation.
+**isFraud:** A binary flag indicating if the transaction was determined to be fraudulent within the simulation.
 
-isFlaggedFraud: A system flag for attempts to transfer more than 200,000 in a single transaction.
+**isFlaggedFraud:** A system flag for attempts to transfer more than 200,000 in a single transaction.
 
 ---
 
 ## 3. Project Methodology 
 The project followed a structured data science workflow to ensure robust and reliable results.
 
-Exploratory Data Analysis (EDA): A deep dive into the data revealed a severe class imbalance and confirmed that fraudulent activity was confined exclusively to TRANSFER and CASH_OUT transaction types. Statistical tests (t-tests) confirmed that transaction amount is a significant differentiator.
+**Exploratory Data Analysis (EDA):** A deep dive into the data revealed a severe class imbalance and confirmed that fraudulent activity was confined exclusively to TRANSFER and CASH_OUT transaction types. Statistical tests (t-tests) confirmed that transaction amount is a significant differentiator.
 
-Feature Engineering: New features were created to capture balance anomalies (errorBalanceOrig, errorBalanceDest). These features proved to be highly predictive, as they signal inconsistencies in financial ledger updates often associated with fraud.
+**Feature Engineering:** New features were created to capture balance anomalies (errorBalanceOrig, errorBalanceDest). These features proved to be highly predictive, as they signal inconsistencies in financial ledger updates often associated with fraud.
 
-Model Selection & Training: An XGBoost (Extreme Gradient Boosting) classifier was chosen for its high performance on tabular data and its ability to handle class imbalance. The scale_pos_weight parameter was used to give more importance to fraudulent cases during training.
+**Model Selection & Training:** An XGBoost (Extreme Gradient Boosting) classifier was chosen for its high performance on tabular data and its ability to handle class imbalance. The scale_pos_weight parameter was used to give more importance to fraudulent cases during training.
 
-Evaluation: The model was evaluated using metrics appropriate for imbalanced datasets, including Precision, Recall, AUC-ROC, and the Precision-Recall Curve. The model demonstrated excellent performance in distinguishing between fraudulent and legitimate transactions.
+**Evaluation:** The model was evaluated using metrics appropriate for imbalanced datasets, including Precision, Recall, AUC-ROC, and the Precision-Recall Curve. The model demonstrated excellent performance in distinguishing between fraudulent and legitimate transactions.
 
 ---
 
 ## 4. Key Findings & Insights 
 
-Fraud Pattern Confirmed: The model confirmed the primary fraud pattern: emptying an account via a high-value TRANSFER and a subsequent CASH_OUT.
+**Fraud Pattern Confirmed:** The model confirmed the primary fraud pattern: emptying an account via a high-value TRANSFER and a subsequent CASH_OUT.
 
-Top Predictors: The most important features for predicting fraud were balance errors, the initial balance of the originating account, the transaction amount, and whether the transaction was a transfer.
+**Top Predictors:** The most important features for predicting fraud were balance errors, the initial balance of the originating account, the transaction amount, and whether the transaction was a transfer.
 
-Actionable Intelligence: The model provides a clear, data-driven profile of a fraudulent transaction, which can be used to build real-time prevention rules.
+**Actionable Intelligence:** The model provides a clear, data-driven profile of a fraudulent transaction, which can be used to build real-time prevention rules.
 
 ---
 
