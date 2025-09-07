@@ -91,10 +91,15 @@ pip (Python package installer)
    Execute the main Python script to run the analysis and train the model.
    ```bash
    python model.ipynb
+   
+---
+
 # Project Report: Machine Learning for Financial Fraud Detection
 
 ## 1. Introduction and Objective
 This report outlines the development of a machine learning model designed to detect fraudulent financial transactions. By analyzing a large transactional dataset, the project aims to identify patterns indicative of fraud and build an accurate predictive model. The ultimate goal is to provide a tool that can proactively flag suspicious activities, thereby enhancing security and mitigating financial losses.
+
+---
 
 ## 2. Data Analysis and Preprocessing
 The initial phase focused on understanding the dataset's structure and identifying key characteristics of fraudulent transactions.
