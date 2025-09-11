@@ -118,12 +118,16 @@ Filtering: The dataset was filtered to include only TRANSFER and CASH_OUT types 
 
 Encoding: The categorical type feature was converted into a numerical format using one-hot encoding.
 
+---
+
 ## 3. Model Development and Training
 An XGBoost (Extreme Gradient Boosting) classifier was selected for this task due to its high performance on imbalanced, tabular datasets.
 
 Handling Class Imbalance: To address the severe class imbalance, the scale_pos_weight parameter was calculated and used. This technique assigns a higher penalty to misclassifying the minority class (fraud), compelling the model to pay closer attention to these critical but rare events.
 
 Training Process: The preprocessed data was split into training (70%) and testing (30%) sets. The XGBoost model was then trained on the training data.
+
+---
 
 ## 4. Model Performance and Evaluation
 The model's performance was rigorously evaluated on the unseen test data.
@@ -133,6 +137,8 @@ Classification Report: The model demonstrated outstanding performance, achieving
 Confusion Matrix: The confusion matrix revealed that the model correctly identified 1,980 fraudulent transactions (True Positives) while missing 490 (False Negatives). It incorrectly flagged only 86 legitimate transactions as fraudulent (False Positives), showcasing a low false alarm rate.
 
 Precision-Recall Curve: The Precision-Recall curve shows an Average Precision (AP) score of 0.899, further confirming the model's excellent capability to distinguish between classes even with the significant class imbalance.
+
+---
 
 ## 5. Key Drivers of Fraud
 The feature importance analysis from the XGBoost model identified the most influential factors in predicting fraudulent transactions.
@@ -146,6 +152,8 @@ newbalanceDest (14.9%): The recipient's balance after the transaction.
 amount (8.9%): The transaction amount itself.
 
 type_TRANSFER (6.8%): Whether the transaction is a TRANSFER is a key indicator.
+
+---
 
 ## 6. Conclusion
 The developed XGBoost model is a highly effective tool for detecting financial fraud. It successfully identifies fraudulent transactions with high precision and recall by focusing on key transactional and behavioral patterns. The model's insights, particularly the importance of account balance changes and transaction types, provide a clear, data-driven foundation for building robust, real-time fraud prevention systems.
