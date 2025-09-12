@@ -143,15 +143,15 @@ Precision-Recall Curve: The Precision-Recall curve shows an Average Precision (A
 ## 5. Key Drivers of Fraud
 The feature importance analysis from the XGBoost model identified the most influential factors in predicting fraudulent transactions.
 
-newbalanceOrig (35.5%): The state of the originator's account balance after the transaction is the single most important predictor. A balance of zero often indicates an account being emptied.
+**newbalanceOrig (35.5%):** The state of the originator's account balance after the transaction is the single most important predictor. A balance of zero often indicates an account being emptied.
 
-oldbalanceOrg (26.5%): The initial balance of the originating account is also highly significant.
+**oldbalanceOrg (26.5%):** The initial balance of the originating account is also highly significant.
 
-newbalanceDest (14.9%): The recipient's balance after the transaction.
+**newbalanceDest (14.9%):** The recipient's balance after the transaction.
 
-amount (8.9%): The transaction amount itself.
+**amount (8.9%):** The transaction amount itself.
 
-type_TRANSFER (6.8%): Whether the transaction is a TRANSFER is a key indicator.
+**type_TRANSFER (6.8%):** Whether the transaction is a TRANSFER is a key indicator.
 
 ---
 
