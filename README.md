@@ -6,7 +6,7 @@ This project presents an XGBoost model to proactively detect fraudulent financia
 TRANSFER and CASH_OUT activities where agents try to empty accounts. By using advanced feature engineering, this proactive solution enhances security and prevents financial loss.
 
 ---
-
+  
 ## 1. Business Context 
 The primary objective is to develop a robust model for predicting fraudulent transactions for a financial company. The insights derived from this model are used to create an actionable plan to enhance security infrastructure and proactively prevent fraudulent activities. The project is based on a simulated financial dataset mimicking real-world behavior over a 30-day period.
 
