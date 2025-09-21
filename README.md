@@ -10,7 +10,7 @@ TRANSFER and CASH_OUT activities where agents try to empty accounts. By using ad
 ## 1. Business Context 
 The primary objective is to develop a robust model for predicting fraudulent transactions for a financial company. The insights derived from this model are used to create an actionable plan to enhance security infrastructure and proactively prevent fraudulent activities. The project is based on a simulated financial dataset mimicking real-world behavior over a 30-day period.
 
----
+--- 
 
 ## 2. The Dataset 
 The dataset is a synthetic log of financial transactions from a mobile money service.
